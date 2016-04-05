@@ -1,3 +1,5 @@
+/*
+
 //alert("Hello");
 
 var i = document.getElementsByTagName('img');
@@ -32,3 +34,42 @@ alert(mainH1.innerText);
 var inHtml = document.getElementById('div_for_img');
 inHtml.innerHTML = "<br><strong>Hello!</strong><br>"
 alert (inHtml.innerHTML);
+
+*/
+
+
+$('#div_for_img');  //выбор по ID
+$('div'); //выборка по тегу div
+$('.maindiv'); //выборка по классам
+
+
+//вложенные теги
+
+$('#div_for_img img');  //все теги img внутри id 
+$('#div_for_img > img');  //все теги img внутри id только на 1  уровень ниже
+
+$('#main_h1 + p'); //выбор следуюшего элемента после указанного id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

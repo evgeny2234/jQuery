@@ -134,3 +134,11 @@ textarea
 {
 	margin-top: 20px;
 }
+
+#div_for_img > img{
+	border: 1px solid red;
+}
+
+#div_for_img + p img{
+	border: 1px solid green;
+}
