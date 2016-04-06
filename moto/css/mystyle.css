@@ -17,6 +17,9 @@
 	padding: 0;
 	width: 900px;
 }
+#div_for_img {
+	border: 2px solid red;
+}
 #forbody
 {
 	padding: 20px;

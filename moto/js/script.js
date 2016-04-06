@@ -103,13 +103,32 @@ alert("Hello");
 
 	var header_f = $('img[src*=logo]');
 	
-	var header_f = $('img[width=900]');
-	header_f.hide(1000).show(3000);
+	//var header_f = $('img[width=900]');
+	//header_f.hide(1000).show(3000);
 	
 	
 	var link = $('a[href$=PDF]');
 	link.hide(1000).text('!!!!!').show(1000);
 	
+	$('img:not(img[width=200])').hide(5000);
 	
+	//$('img:not(#w)').hide(5000);
+	
+	//$('#div_for_img').width(900).height(200);
+	
+	var id = '#forfooter';
+	
+	alert ($(id).width());
+	//alert ($('[id]').height());
+	
+	function f1(id)
+	{
+		$('.res > p:first').text(($(id).width()));
+		$('.res > p:last').text(($(id).height()));
+	}
+	
+	
+	
+	f1(id);
 	
 });
