@@ -166,17 +166,14 @@ alert("Hello");
 				alert('true');
 				return true;
 			}
-			
 		}
-		
-		
 	}
 	
 	
 	f2(id,time);
 	
 	
-	
+	$('#div_for_img').slideUp(4000).slideDown(3000);
 	
 	
 	
