@@ -139,4 +139,43 @@ alert("Hello");
 	
 	//alert ($('#moto_models').html('<li>Харлей <strong>Дэвидсон</strong></li><li>Кроссовый мотоцикл</li><li>Гоночный мотоцикл</li><li>Концептуальный мотоцикл</li>'));
 	
+	
+	var id = prompt('Input ID ');
+	var time = prompt('How long? ');
+	
+	time=parseInt(time);
+	
+	
+	function f2(id,time)
+	{
+		if(isNaN(time))
+		{
+			alert('false');
+			return false;
+		}
+		else
+		{
+			if(time>=500&&time<=10000)
+			{
+				$(id).fadeOut(time);
+				alert('true');
+				return true;
+			}
+			
+		}
+		
+		
+	}
+	
+	
+	f2(id,time);
+	
+	
+	
+	
+	
+	
+	
+	
+	
 });
