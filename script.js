@@ -1,6 +1,6 @@
 $(document).ready(function() {
-
-alert("Hello");
+	
+	alert("Hello");
 	//Операции выборки!!
 
 	/*
@@ -98,15 +98,29 @@ alert("Hello");
 	*/
 	
 	
-	var text_h1 = $('#main_h1').text();
-	alert(text_h1);
+	alert('Hello');
+	
+	
+	
+}); //конец
 
-	var header_f = $('img[src*=logo]');
-	
-	var header_f = $('img[width=900]');
-	header_f.hide(1000);
-	header_f.show(1000);
-	
-	
-	
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
