@@ -104,8 +104,11 @@ alert("Hello");
 	var header_f = $('img[src*=logo]');
 	
 	var header_f = $('img[width=900]');
-	header_f.hide(1000);
-	header_f.show(1000);
+	header_f.hide(1000).show(3000);
+	
+	
+	var link = $('a[href$=PDF]');
+	link.hide(1000).text('!!!!!').show(1000);
 	
 	
 	
