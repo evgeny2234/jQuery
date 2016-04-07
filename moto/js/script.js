@@ -1,12 +1,7 @@
 $(document).ready(function() {
 
-alert("Hello");
 	//Операции выборки!!
-
 	/*
-
-	
-
 	var i = document.getElementsByTagName('img');
 
 	//alert(i.length);
@@ -41,39 +36,6 @@ alert("Hello");
 	alert (inHtml.innerHTML);
 
 	*/
-
-/*
-	$('#div_for_img');  //выбор по ID
-	$('div'); //выборка по тегу div
-	$('.maindiv'); //выборка по классам
-
-
-	//вложенные теги
-
-	$('#div_for_img img');  //все теги img внутри id 
-	$('#div_for_img > img');  //все теги img внутри id только на 1  уровень ниже
-
-	$('#main_h1 + p'); //выбор следуюшего элемента после указанного id
-
-
-	//--------------------------
-
-	$('img[width=200]');
-
-	$('a[href^=http]');   //все ссылки которые начтнаются с http
-
-	$('img[src$=.jpg]');   //все ссылки которые щканчиваются на .jpg
-
-	$('img[src*=moto]');   //все ссылки которые в любом месте имеют слово moto
-
-	//----------------HW----------------
-
-	$('#my_links[href^=documents]');   
-
-	$('#forfooter > img[title=Производители]');  
-
-	//---------------------------------------------------
-*/
 	
 	/*
 	$('div > img'); //выборка по дочерним тегам или классам
@@ -108,72 +70,100 @@ alert("Hello");
 	$('#id').fadeIn(3000); //показать элемент плавно за какое время
 	$('#id').fadeTo(3000,0.5); //показать/скрыть элемент плавно за какое время и до какой прозрачности
 	
+	$('#id > img').slideUp(3000)   //свертывание элемента вверх
+	$('#id > img').slideDown(3000)   //развертывание элемента обратно
+	
+	$('#forfooter > img').attr('height',200);// управление атрибутами
+	$('#forfooter > img').removeAttr('title').attr('title','new');  //удаление и добавление атрибута
 	*/
 	
+	/*
 	
-	var text_h1 = $('#main_h1').text();
-	alert(text_h1);
+		var text_h1 = $('#main_h1').text();   //выборка текста внутри тега
+		alert(text_h1);
 
-	var header_f = $('img[src*=logo]');
-	
-	//var header_f = $('img[width=900]');
-	//header_f.hide(1000).show(3000);
-	
-	
-	var link = $('a[href$=PDF]');
-	link.hide(1000).text('!!!!!').show(1000);
-	
-	$('img:not(img[width=200])').hide(5000);
-	
-	//$('img:not(#w)').hide(5000);
-	
-	//$('#div_for_img').width(900).height(200);
-	
-	var id = '#forfooter';
-	
-	alert ($(id).width());
-	//alert ($('[id]').height());
-	
-	function f1(id)
-	{
-		$('.res > p:first').text(($(id).width()));
-		$('.res > p:last').text(($(id).height()));
-	}
-	
-	f1(id);
-	
-	//alert ($('#moto_models').html('<li>Харлей <strong>Дэвидсон</strong></li><li>Кроссовый мотоцикл</li><li>Гоночный мотоцикл</li><li>Концептуальный мотоцикл</li>'));
-	
-	
-	var id = prompt('Input ID ');
-	var time = prompt('How long? ');
-	
-	time=parseInt(time);
-	
-	
-	function f2(id,time)
-	{
-		if(isNaN(time))
+		var header_f = $('img[src*=logo]');
+		
+		//var header_f = $('img[width=900]');
+		//header_f.hide(1000).show(3000);
+		
+		
+		var link = $('a[href$=PDF]');
+		link.hide(1000).text('!!!!!').show(1000);
+		
+		$('img:not(img[width=200])').hide(5000);
+		
+		//$('img:not(#w)').hide(5000);
+		
+		//$('#div_for_img').width(900).height(200);
+		
+		var id = '#forfooter';
+		
+		alert ($(id).width());
+		//alert ($('[id]').height());
+		
+		function f1(id)
 		{
-			alert('false');
-			return false;
+			$('.res > p:first').text(($(id).width()));
+			$('.res > p:last').text(($(id).height()));
 		}
-		else
+		
+		f1(id);
+		
+		//alert ($('#moto_models').html('<li>Харлей <strong>Дэвидсон</strong></li><li>Кроссовый мотоцикл</li><li>Гоночный мотоцикл</li><li>Концептуальный мотоцикл</li>'));
+		
+		
+		var id = prompt('Input ID ');
+		var time = prompt('How long? ');
+		
+		time=parseInt(time);
+		
+		
+		function f2(id,time)
 		{
-			if(time>=500&&time<=10000)
+			if(isNaN(time))
 			{
-				$(id).fadeOut(time);
-				alert('true');
-				return true;
+				alert('false');
+				return false;
+			}
+			else
+			{
+				if(time>=500&&time<=10000)
+				{
+					$(id).fadeOut(time);
+					alert('true');
+					return true;
+				}
 			}
 		}
+		
+		f2(id,time);
+		
+		$('#div_for_img').slideUp(4000).slideDown(3000);
+	
+	*/
+	
+	var link1 = document.getElementById('img_1');   //чистым JS вытаскиваем атрибуты их значения
+	var j = link1.getAttribute('width');
+	alert(j);
+	
+	
+	var result = $('#forfooter > img').attr('height',200);   //узнали значение атрибута и можем его поменять
+	alert(result);
+	
+	$('#forfooter > img').removeAttr('title').attr('title','new');  //удаление атрибута и добавление нового атрибута
+	
+	
+	var id = prompt('input ID: ');
+	var attr = prompt('input attr: ');
+	var change = prompt('input change: ');
+	
+	function f3(id,attr,change)
+	{
+		$(id).attr(attr,change);
 	}
 	
-	
-	f2(id,time);
-	
-	
-	$('#div_for_img').slideUp(4000).slideDown(3000);
+	f3(id,attr,change);
 	
 	
 	
