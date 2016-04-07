@@ -78,6 +78,14 @@ $(document).ready(function() {
 	
 	$('div').addClass('class');  //добавление класса в тег
 	$('div').removeClass('class');  //удаление класса из тега
+	
+	$('#id').css('свойство','значение');  //изменение параметров блоков
+	$('#id').css({
+	'свойство','значение'},
+	'свойство','значение'},
+	'свойство','значение'}
+	});  //изменение параметров блоков
+	
 	*/
 	
 	/*
@@ -146,6 +154,7 @@ $(document).ready(function() {
 	
 	*/
 	
+	/*
 	var link1 = document.getElementById('img_1');   //чистым JS вытаскиваем атрибуты их значения
 	var j = link1.getAttribute('width');
 	alert(j);
@@ -179,6 +188,36 @@ function f5()
 }
 setTimeout(f4,7000);
 setTimeout(f5,9000);
+	*/
+	
+	var textSize = $('#main_h1').css('color');   //вывод стиля текущего
+	alert(textSize);
+	$('#main_h1').css('color','green');   //вывод стиля текущего и замена на зеленый
+	textSize = $('#main_h1').css('color');
+	alert(textSize);
+	
+	$('#main_h1').css({  //передача сразу несклькх параметров (атрибутов)
+		'color':'black',
+		'padding-top': '10px',
+		'background-color':'red'
+	});
+	
+	$('#my_h3 span').removeClass('pq');
+	
+	$('#my_h3 span').css({
+		'border': '1px solid #cc0000',
+		'padding': '5px',
+		'background-color': '#f6f6f6'	
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 });
