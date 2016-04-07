@@ -85,6 +85,8 @@ $(document).ready(function() {
 	'свойство','значение'},
 	'свойство','значение'}
 	});  //изменение параметров блоков
+
+	$('#id').animate({'borderWidth':'10px'},5000, function(){alert('Finish');})  //Анимация animate вполняет действие за промежток времени и посе нее еще может быть выполнена еще одна функция
 	
 	*/
 	
@@ -190,6 +192,7 @@ setTimeout(f4,7000);
 setTimeout(f5,9000);
 	*/
 	
+	/* 
 	var textSize = $('#main_h1').css('color');   //вывод стиля текущего
 	alert(textSize);
 	$('#main_h1').css('color','green');   //вывод стиля текущего и замена на зеленый
@@ -214,12 +217,10 @@ setTimeout(f5,9000);
 	
 	$('#img_2').css({'border':'2px solid green'}).animate({'borderWidth':'5px'},5000, function() {alert('Finish'); $('#rrr').fadeOut(3000);});
 	
+	*/
 	
-	
-	
-	
-	
-	
-	
+    
+
+
 	
 });
