@@ -210,7 +210,9 @@ setTimeout(f5,9000);
 		'background-color': '#f6f6f6'	
 	});
 	
+	$('.animate').css({'border':'2px solid red','display':'block'}).animate({'marginLeft':'-1000px'},4000,function() {alert('Я сдвинул блок влево')});
 	
+	$('#img_2').css({'border':'2px solid green'}).animate({'borderWidth':'5px'},5000, function() {alert('Finish'); $('#rrr').fadeOut(3000);});
 	
 	
 	
