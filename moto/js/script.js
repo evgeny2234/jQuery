@@ -75,6 +75,9 @@ $(document).ready(function() {
 	
 	$('#forfooter > img').attr('height',200);// управление атрибутами
 	$('#forfooter > img').removeAttr('title').attr('title','new');  //удаление и добавление атрибута
+	
+	$('div').addClass('class');  //добавление класса в тег
+	$('div').removeClass('class');  //удаление класса из тега
 	*/
 	
 	/*
@@ -166,8 +169,16 @@ $(document).ready(function() {
 	f3(id,attr,change);
 	
 	
-	
-	
+function f4()
+{
+	$('#main_h1').addClass('new');
+}		
+function f5()
+{
+	$('#main_h1').removeClass('new');
+}
+setTimeout(f4,7000);
+setTimeout(f5,9000);
 	
 	
 });

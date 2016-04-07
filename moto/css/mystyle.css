@@ -137,3 +137,9 @@ textarea
 {
 	margin-top: 20px;
 }
+
+.new {
+	border: 2px solid red;
+	padding: 5px;
+	background: green;
+}
