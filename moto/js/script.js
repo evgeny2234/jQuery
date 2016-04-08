@@ -99,6 +99,8 @@ $(document).ready(function() {
     	}
     });
 
+	$('div').size(); //показывает, сколько всего у Нас в html тех или иных элементов
+	$('div').get(1);  //получаем JavaScript объект под указанным номеров
 	*/
 	
 	/*
@@ -229,7 +231,7 @@ setTimeout(f5,9000);
 	$('#img_2').css({'border':'2px solid green'}).animate({'borderWidth':'5px'},5000, function() {alert('Finish'); $('#rrr').fadeOut(3000);});
 	
 	*/
-	
+	/*
 
 	$('#div_for_img').css({'border':'1px solid cyan'}).before('<p>This string has been written wiith method Before</p>');
 	$('#div_for_img').css({'border':'1px solid cyan'}).after('<p>This string has been written wiith method After</p>');
@@ -246,11 +248,11 @@ $('#newparagraph').css({
 	'border' : '2px solid red'
 });
 
-    /*$('img').each(function(){           //для каждого элемента выполяется if и действие
+    $('img').each(function(){           //для каждого элемента выполяется if и действие
     	if($(this).width() > 400){
     		$(this).fadeOut(3000);
     	}
-    });*/
+    });
 
     //---------------HW---------------------
 	$('img[title*=t]').each(function(){ 
@@ -261,5 +263,9 @@ $('#newparagraph').css({
     		});
     	}
     });
+*/
+
+alert($('div').size()); //показывает, сколько всего у Нас в html тех или иных элементов
+$('div').get(1);  //получаем JavaScript объект под указанным номеров
 
 }); //конец jQuery
