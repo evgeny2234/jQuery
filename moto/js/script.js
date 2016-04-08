@@ -88,6 +88,10 @@ $(document).ready(function() {
 
 	$('#id').animate({'borderWidth':'10px'},5000, function(){alert('Finish');})  //Анимация animate вполняет действие за промежток времени и посе нее еще может быть выполнена еще одна функция
 	
+	$('#div_for_img').before('<p>This string has been written wiith method Before</p>'); //добавддяет код перед выбранным блоком
+	$('#div_for_img').after('<p>This string has been written wiith method After</p>');  //добавляет екод после выбранного блока
+	$('#div_for_img').append('<p>This string has been written wiith method Apend</p>'); //добавляет код крайним внутри выбранного блока
+    $('#div_for_img').prepend('<p>This string has been written wiith method Prepend</p>'); //обавляет код первым нутри выбранного блока
 	*/
 	
 	/*
@@ -219,7 +223,10 @@ setTimeout(f5,9000);
 	
 	*/
 	
-    
+	$('#div_for_img').css({'border':'1px solid cyan'}).before('<p>This string has been written wiith method Before</p>');
+	$('#div_for_img').css({'border':'1px solid cyan'}).after('<p>This string has been written wiith method After</p>');
+	$('#div_for_img').css({'border':'1px solid cyan'}).append('<p>This string has been written wiith method Apend</p>');
+    $('#div_for_img').css({'border':'1px solid cyan'}).prepend('<p>This string has been written wiith method Prepend</p>');
 
 
 	
