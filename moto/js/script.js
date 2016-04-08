@@ -92,6 +92,13 @@ $(document).ready(function() {
 	$('#div_for_img').after('<p>This string has been written wiith method After</p>');  //добавляет екод после выбранного блока
 	$('#div_for_img').append('<p>This string has been written wiith method Apend</p>'); //добавляет код крайним внутри выбранного блока
     $('#div_for_img').prepend('<p>This string has been written wiith method Prepend</p>'); //обавляет код первым нутри выбранного блока
+	
+	$('img').each(function(){           //для каждого элемента выполяется if и действие (метод each)
+    	if($(this).width() > 400){
+    		$(this).fadeOut(3000);
+    	}
+    });
+
 	*/
 	
 	/*
@@ -223,11 +230,17 @@ setTimeout(f5,9000);
 	
 	*/
 	
+
 	$('#div_for_img').css({'border':'1px solid cyan'}).before('<p>This string has been written wiith method Before</p>');
 	$('#div_for_img').css({'border':'1px solid cyan'}).after('<p>This string has been written wiith method After</p>');
 	$('#div_for_img').css({'border':'1px solid cyan'}).append('<p>This string has been written wiith method Apend</p>');
     $('#div_for_img').css({'border':'1px solid cyan'}).prepend('<p>This string has been written wiith method Prepend</p>');
 
 
+    $('img').each(function(){           //для каждого элемента выполяется if и действие
+    	if($(this).width() > 400){
+    		$(this).fadeOut(3000);
+    	}
+    });
 	
 });
