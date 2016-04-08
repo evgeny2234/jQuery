@@ -235,12 +235,31 @@ setTimeout(f5,9000);
 	$('#div_for_img').css({'border':'1px solid cyan'}).after('<p>This string has been written wiith method After</p>');
 	$('#div_for_img').css({'border':'1px solid cyan'}).append('<p>This string has been written wiith method Apend</p>');
     $('#div_for_img').css({'border':'1px solid cyan'}).prepend('<p>This string has been written wiith method Prepend</p>');
+//----------------HW-------------------------
 
+$('body').append('<p>Homework Append</p>');
+$('body > p:last').attr('id','newparagraph');
+$('#newparagraph').css({
+	'backgroundColor' : 'black',
+	'color' : 'white',
+	'display' : 'block',
+	'border' : '2px solid red'
+});
 
-    $('img').each(function(){           //для каждого элемента выполяется if и действие
+    /*$('img').each(function(){           //для каждого элемента выполяется if и действие
     	if($(this).width() > 400){
     		$(this).fadeOut(3000);
     	}
+    });*/
+
+    //---------------HW---------------------
+	$('img[title*=t]').each(function(){ 
+    	if($(this).height() > 50 && $(this).height() < 100){
+    		$(this).css({
+    			'marginBottom' : '10px',
+    			'border' : '3px solid red'
+    		});
+    	}
     });
-	
-});
+
+}); //конец jQuery

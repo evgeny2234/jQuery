@@ -147,3 +147,7 @@ textarea
 .pq {
 	border: 1px solid red;
 }
+
+#newparagraph {
+	color: green;
+}
