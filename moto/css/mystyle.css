@@ -151,3 +151,17 @@ textarea
 #newparagraph {
 	color: green;
 }
+#hideBlock {
+	padding-bottom: 5px;
+	color: black;
+	cursor: pointer;
+	text-decoration: underline;
+	font-size: 2em;
+}
+
+.classButton {
+	color:white;
+	
+	cursor: pointer;
+	width: 100px;
+}

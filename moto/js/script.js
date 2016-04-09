@@ -308,6 +308,20 @@ load - когда браузер загрузил всю страницу (вс�
 resize - меняется ширина окна браузера
 scroll - прокрутка окна
 upload - когда закрываем страницу или переходим на другую страницу
+
+$('#moto_table td').hover(function(){     //действия при наведении мышки и когда ее уводишь
+
+},function() {
+   
+});
+
+$('#moto_table td').toggle(function(){    //действие при клике и при пвторном клике (работает нормальн до версии jQuery 1.8)
+
+},function() {
+   
+});
+
+
  */
 /*
  var myMoto = document.getElementById('img_1');
@@ -329,6 +343,8 @@ upload - когда закрываем страницу или переходи�
 
 */
 
+
+  // События через jQuery
 $('#div_for_img img').click(function() {
 
 	var clone = $(this).clone();
@@ -345,17 +361,75 @@ $('#moto_models li').click(function(){
 
 });
 
-$('#moto_table td').click(function(){
+/*
+$('#moto_table td').mouseover(function(){
 
-	alert('Hell');
+	//alert('Hell');
 	$(this).css({
 		'borderBottom':'2px solid #1F233C',
 		'color':'red',
 		'backgroundColor':'cyan'
-})
+	})
 
 });
 
+$('#moto_table td').mouseout(function(){
+
+	//alert('Hell');
+	$(this).css({
+		'borderBottom':'none',
+		'color':'black',
+		'backgroundColor':'white'
+	})
+
+});
+*/
+
+
+$('#moto_table td').hover(function(){
+
+$(this).css({
+		'borderBottom':'2px solid #1F233C',
+		'color':'red',
+		'backgroundColor':'cyan'
+	});
+
+},function() {
+
+	$(this).css({
+		'borderBottom':'none',
+		'color':'black',
+		'backgroundColor':'white'
+	});
+
+});
+
+//-----------HW----------------
+$('#my_button').hover(function(){
+
+	$(this).css({'backgroundColor':'#32375D','color':'white'});
+
+},function() {
+
+	$(this).css({'backgroundColor':'#f6f6f6','color':'#2C2C2C'});
+
+});
+
+
+//$('#hideBlock').click(function(){
+//toggle с двумя функциями работает для jQuery версии до 1.8
+
+$('#hideBlock').toggle(function(){
+
+	$('#my_form').fadeOut(3000);
+	$(this).text('развернуть');
+
+},function() {
+
+	$('#my_form').fadeIn(3000);
+	$(this).text('свернуть');
+
+})//});
 
 
 
