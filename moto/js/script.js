@@ -326,7 +326,54 @@ upload - когда закрываем страницу или переходи�
  	alert('Finish2');
  }
  myMoto2.onclick = f2;
- 
+
 */
+
+$('#div_for_img img').click(function() {
+
+	var clone = $(this).clone();
+	$('#forresults').append(clone);
+
+});
+
+
+$('#moto_models li').click(function(){
+
+	var myText = $(this).text();
+	//alert('Hell');
+	$('.mototable tbody').append('<tr><td>'+ myText +'</td><td>10000</td></tr>');
+
+});
+
+$('#moto_table td').click(function(){
+
+	alert('Hell');
+	$(this).css({
+		'borderBottom':'2px solid #1F233C',
+		'color':'red',
+		'backgroundColor':'cyan'
+})
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }); //конец jQuery
