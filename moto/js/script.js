@@ -309,7 +309,24 @@ resize - меняется ширина окна браузера
 scroll - прокрутка окна
 upload - когда закрываем страницу или переходим на другую страницу
  */
+/*
+ var myMoto = document.getElementById('img_1');
 
+ function f1() {
+ 	alert('Вы кликнули по мотоциклу 1, его ширина: '+myMoto.width);
+ 	$('#img_1').animate({'paddingLeft':'400'},5000,function(){alert('Finish')});
+ }
+ myMoto.onclick = f1;
+
+
+ var myMoto2 = document.getElementById('img_2');
+
+ function f2() {
+ 	$('#img_2').fadeOut(3000);
+ 	alert('Finish2');
+ }
+ myMoto2.onclick = f2;
  
+*/
 
 }); //конец jQuery
