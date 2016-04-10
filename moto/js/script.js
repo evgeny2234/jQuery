@@ -528,7 +528,7 @@ $('#my_button').click(function(event){
 $(':submit').fadeOut(2000);    //все кнопки типа submit 
 $(':checkbox').fadeOut(2000);  //все checkbox-ы
 */
-
+/*
 
 $('#checkButton').click(function(){
 	//alert($('#mytextarea').val());
@@ -546,7 +546,7 @@ $('#checkButton').click(function(){
 	//alert($('#mytextarea').val());
 	alert($('#radio :checked').val());
 });
-
+*/
 /*
 $(':checkbox:checked').each(function(){
 	alert('checkbox');
@@ -554,7 +554,7 @@ $(':checkbox:checked').each(function(){
 });
 */
 //-------------------------------------------------
-
+/*
 $('#my_form').submit(function(event){
 
 	if($('#email').val() == "")
@@ -569,11 +569,11 @@ $('#email').focus(function(){
 
 
 	$(this).addClass('onFocus');
-/*
-	$(this).css({
-		'boxShadow':'green 0 0 5px'
-	});
-*/
+
+	//$(this).css({
+	//	'boxShadow':'green 0 0 5px'
+	//});
+
 
 	if($('#email').val() == "Пример: you@site.ru")
 	{
@@ -585,11 +585,11 @@ $('#email').focus(function(){
 $('#email').blur(function(){
 
 	$(this).removeClass('onFocus');
-/*
-	$(this).css({
-		'boxShadow':'none'
-	});
-*/
+
+	//$(this).css({
+	//	'boxShadow':'none'
+	//});
+
 
 	if($('#email').val() == "")
 	{
@@ -598,11 +598,51 @@ $('#email').blur(function(){
 
 });
 
+*/
 
+//-----метод Change---------
 
+$('#motoSelect').change(function(){
 
+	var select = $('#motoSelect :selected').val();
+	if(select==1)
+	{
+		$('#daysSelect').html('<option value="1">1</option><option value="2">2</option><option value="3">3</option>');
+	}
+	if(select==2)
+	{
+		$('#daysSelect').html('<option value="1">1</option>');
+	}
+	if(select==3)
+	{
+		$('#daysSelect').html('<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>');
+	}
+	if(select==4)
+	{
+		$('#daysSelect').html('<option value="1">1</option><option value="2">2</option>');
+	}
 
+});
 
+var nicks = ["x.geka2009@gmail.com","x.kuklovod@gmail.com","loveorel1974@mail.ru","x.infoprice@yandex.ru","maxim","Kate","Lubov","Evgeny","slava","luba11123","KOrel"];
+
+$('#email').change(function(){
+
+//alert(nicks);
+	for(var i=0;i<nicks.length;i++)
+	{
+		if(nicks[i]==$('#email').val())
+		alert('Такая почта уже есть в базе');
+	}
+
+	
+	/*if($('#email').val()==$(this))
+	{
+		alert('False');
+	}
+	*/
+
+});
 
 
 
