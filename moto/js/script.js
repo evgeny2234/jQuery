@@ -571,6 +571,24 @@ $('#email').focus(function(){
 		'boxShadow':'green 0 0 5px'
 	});
 
+	if($('#email').val() == "Пример: you@site.ru")
+	{
+		$('#email').val('');
+	}
+
+});
+
+$('#email').blur(function(){
+
+	$(this).css({
+		'boxShadow':'none'
+	});
+
+	if($('#email').val() == "")
+	{
+		$('#email').val('Пример: you@site.ru');
+	}
+
 });
 
 
