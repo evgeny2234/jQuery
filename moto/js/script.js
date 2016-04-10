@@ -321,6 +321,19 @@ $('#moto_table td').toggle(function(){    //действие при клике �
    
 });
 
+$('#div_for_img').click(function(eventObject){
+
+	alert('Click');
+	alert('Координата щелчка по оси oX: ' + eventObject.screenX + ' Координата щелчка по оси oY:' + eventObject.screenY);
+	alert('Координата щелчка по оси oX: ' + eventObject.pageX + ' Координата щелчка по оси oY:' + eventObject.pageY);
+	alert('Была ли нажата клавиша Alt: ' + eventObject.altKey);
+	alert('Была ли нажата клавиша Ctrl: ' + eventObject.ctrlKey);
+	alert('Была ли нажата клавиша Shift: ' + eventObject.shiftKey);
+
+	var myObject = eventObject.target;
+	alert('Какой оъект отреагировал на событие: ' + myObject.id);
+});
+
 
  */
 /*
@@ -332,6 +345,7 @@ $('#moto_table td').toggle(function(){    //действие при клике �
  }
  myMoto.onclick = f1;
 
+<<<<<<< HEAD
 
  var myMoto2 = document.getElementById('img_2');
 
@@ -345,6 +359,7 @@ $('#moto_table td').toggle(function(){    //действие при клике �
 
 
   // События через jQuery
+  /*
 $('#div_for_img img').click(function() {
 
 	var clone = $(this).clone();
@@ -360,7 +375,7 @@ $('#moto_models li').click(function(){
 	$('.mototable tbody').append('<tr><td>'+ myText +'</td><td>10000</td></tr>');
 
 });
-
+*/
 /*
 $('#moto_table td').mouseover(function(){
 
@@ -385,7 +400,7 @@ $('#moto_table td').mouseout(function(){
 });
 */
 
-
+/*
 $('#moto_table td').hover(function(){
 
 $(this).css({
@@ -432,9 +447,63 @@ $('#hideBlock').toggle(function(){
 })//});
 
 
+ var myMoto2 = document.getElementById('img_2');
+
+ function f2() {
+ 	$('#img_2').fadeOut(3000);
+ 	alert('Finish2');
+ }
+ myMoto2.onclick = f2;
+*/
+
+//Понятие объекта событий
 
 
+/*
+$('#div_for_img').click(function(eventObject){
 
+	alert('Click');
+	alert('Координата щелчка по оси oX: ' + eventObject.screenX + ' Координата щелчка по оси oY:' + eventObject.screenY);
+	alert('Координата щелчка по оси oX: ' + eventObject.pageX + ' Координата щелчка по оси oY:' + eventObject.pageY);
+	alert('Была ли нажата клавиша Alt: ' + eventObject.altKey);
+	alert('Была ли нажата клавиша Ctrl: ' + eventObject.ctrlKey);
+	alert('Была ли нажата клавиша Shift: ' + eventObject.shiftKey);
+
+	var myObject = eventObject.target;
+	alert('Какой оъект отреагировал на событие: ' + myObject.id);
+});
+
+	$('img[alt*=Мотоцикл]').click(function(event){
+		click++;
+		alert(click);
+	if(event.shiftKey)
+	{
+		$(this).css({
+			'border':'4px solid red'
+		})
+	}
+	else
+	{
+		$(this).css({
+			'border':'4px solid green'
+		})
+	}
+
+	});
+
+*/
+
+$('#my_button').click(function(event){
+
+	if(confirm('Are You ready?'))
+	{
+		alert('Okey');
+	}
+	else
+	{
+		event.preventDefault();
+	}
+});
 
 
 
