@@ -544,18 +544,34 @@ $('#checkButton').click(function(){
 
 $('#checkButton').click(function(){
 	//alert($('#mytextarea').val());
-
 	alert($('#radio :checked').val());
 });
 
-
+/*
 $(':checkbox:checked').each(function(){
 	alert('checkbox');
 	alert($(this).val());
 });
+*/
+//-------------------------------------------------
 
+$('#my_form').submit(function(event){
 
+	if($('#email').val() == "")
+	{
+		event.preventDefault();
+		alert('Вы не заполнили поле Email!');
+	}
 
+});
+
+$('#email').focus(function(){
+
+	$(this).css({
+		'boxShadow':'green 0 0 5px'
+	});
+
+});
 
 
 
