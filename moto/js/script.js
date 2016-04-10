@@ -507,6 +507,9 @@ $('#my_button').click(function(event){
 */
 
 
+//gallery слайдшоу галлерея
+/*
+
 $('#small a').click(function(event){
 
 	event.preventDefault();
@@ -534,6 +537,9 @@ $('#small a').click(function(){
 	});
 
 });
+
+*/
+
 
 
 
