@@ -564,7 +564,7 @@ $('#my_form').submit(function(event){
 	}
 
 });
-
+*/
 $('#email').focus(function(){
 
 
@@ -598,11 +598,10 @@ $('#email').blur(function(){
 
 });
 
-*/
 
 //-----метод Change---------
 
-$('#motoSelect').change(function(){
+$('#motoSelect').change(function(){   //отключаем или добавляем опции в ависимости от выбора мотоцикла (метд change)
 
 	var select = $('#motoSelect :selected').val();
 	if(select==1)
@@ -625,25 +624,50 @@ $('#motoSelect').change(function(){
 });
 
 var nicks = ["x.geka2009@gmail.com","x.kuklovod@gmail.com","loveorel1974@mail.ru","x.infoprice@yandex.ru","maxim","Kate","Lubov","Evgeny","slava","luba11123","KOrel"];
+var regV = /[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}/;
 
-$('#email').change(function(){
+$('#email').change(function(){   //проверка заполнения почты на регулярное выражение и на поиск почты в Нашей базе
 
-//alert(nicks);
 	for(var i=0;i<nicks.length;i++)
 	{
 		if(nicks[i]==$('#email').val())
 		alert('Такая почта уже есть в базе');
 	}
 
-	
-	/*if($('#email').val()==$(this))
-	{
-		alert('False');
-	}
-	*/
+
+		if (regV.test( $('#email').val() ) )
+		{
+			$('#email').css({
+				'backgroundColor':'green'
+			});
+  			//alert("Данная строка соответсвует заявленому патерну");
+		}
+		else
+	    {
+	    	$('#email').css({
+				'backgroundColor':'red'
+			});
+	    }
+});
+
+$('#my_button').click(function(){   //блокировка кнопки отправки формы после первой отправки формы
+
+	$('#my_button').attr('disabled','disabled');
 
 });
 
+$('#motoSelect').change(function(){   //отключаем чекпоинт (одну из галочек) в зависимости от выбора мотоцикла
+
+	if($('#motoSelect :selected').val()==4)
+	{
+		$('input[id=bag]').attr('disabled','disabled');
+	}
+	else
+	{
+	 	$('input[id=bag]').attr('disabled',false);
+	}
+
+});
 
 
 
