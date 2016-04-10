@@ -567,9 +567,13 @@ $('#my_form').submit(function(event){
 
 $('#email').focus(function(){
 
+
+	$(this).addClass('onFocus');
+/*
 	$(this).css({
 		'boxShadow':'green 0 0 5px'
 	});
+*/
 
 	if($('#email').val() == "Пример: you@site.ru")
 	{
@@ -580,9 +584,12 @@ $('#email').focus(function(){
 
 $('#email').blur(function(){
 
+	$(this).removeClass('onFocus');
+/*
 	$(this).css({
 		'boxShadow':'none'
 	});
+*/
 
 	if($('#email').val() == "")
 	{

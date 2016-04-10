@@ -195,3 +195,6 @@ textarea
      
 }
 
+.onFocus {
+	box-shadow: green 0 0 5px;
+}
