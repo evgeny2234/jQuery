@@ -20,12 +20,12 @@ if(res!=res2)
 $('#small a').click(function(){
 
 	$('#small a').css({
-		'opacity':'1'
+		'opacity':'1',
 	})
 	
 	$(this).css({
 		'opacity':'0.6',
-		'transition':'1s'
+		'transition':'1s',
 	});
 
 });

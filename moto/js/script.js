@@ -505,40 +505,58 @@ $('#my_button').click(function(event){
 	}
 });
 */
-
-
-//gallery слайдшоу галлерея
 /*
+//Упрощенная работа с формами, выборка из элементов форм
+:input - выберет Все элементы, которые влияют на ввод данных в форме
+:text - поля ввода, которые были созданы, как <input type="text"...
+:password - поля ввода, которые были созданы, как <input type="password"...
+:radio - поля ввода, которые были созданы, как <input type="radio"...
+:checkbox - поля ввода, которые были созданы, как <input type="checkbox"...
+:submit - поля ввода, которые были созданы, как <input type="submit"...
+:image - поля ввода, которые были созданы, как <input type="image"...
+:reset - поля ввода, которые были созданы, как <input type="reset"...
+:button - поля ввода, которые были созданы, как <input type="button"...
+:file - поля ввода, которые были созданы, как <input type="file"...
+:hidden - поля ввода, которые были созданы, как <input type="hidden"...
 
-$('#small a').click(function(event){
+:checked - выбрать все использованные или выбранные поля.
+:checkbox:checked - выбрать все использованные или выбранные поля checkbox.
+:radio:checked - выбрать все использованные или выбранные поля radio.
 
-	event.preventDefault();
-var res = $(this).attr('href');
-var res2 = $('#big img').attr('src');
-if(res!=res2)
-	{
-		$('#big img').hide();
-		$('#big img').attr('src',$(this).attr('href'));
-		$('#big img').load(function(){
-				$('#big img').fadeIn(1500);
-		})
-	}
+:selected - выбрать все использованные или выбранные поля select (список) т.е. выбранные.
 
-});
-
-$('#small a').click(function(){
-
-	$('#small a').css({
-		'opacity':'1'
-	})
-	
-	$(this).css({
-		'opacity':'0.6'
-	});
-
-});
-
+$(':submit').fadeOut(2000);    //все кнопки типа submit 
+$(':checkbox').fadeOut(2000);  //все checkbox-ы
 */
+
+
+$('#checkButton').click(function(){
+	//alert($('#mytextarea').val());
+
+	alert($('#email').val());
+});
+
+$('#checkButton').click(function(){
+	//alert($('#mytextarea').val());
+
+	alert($('#motoSelect :selected').val());
+});
+
+$('#checkButton').click(function(){
+	//alert($('#mytextarea').val());
+
+	alert($('#radio :checked').val());
+});
+
+
+$(':checkbox:checked').each(function(){
+	alert('checkbox');
+	alert($(this).val());
+});
+
+
+
+
 
 
 
