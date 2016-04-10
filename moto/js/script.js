@@ -565,7 +565,7 @@ $('#my_form').submit(function(event){
 
 });
 */
-$('#email').focus(function(){
+$('#email').focus(function(){ 
 
 
 	$(this).addClass('onFocus');
@@ -582,7 +582,7 @@ $('#email').focus(function(){
 
 });
 
-$('#email').blur(function(){
+$('#email').blur(function(){ 
 
 	$(this).removeClass('onFocus');
 
@@ -653,6 +653,7 @@ $('#email').change(function(){   //проверка заполнения поч�
 $('#my_button').click(function(){   //блокировка кнопки отправки формы после первой отправки формы
 
 	$('#my_button').attr('disabled','disabled');
+	$('#my_button').attr('value','заявка отправлена');
 
 });
 
